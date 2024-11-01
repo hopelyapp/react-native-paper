@@ -82,7 +82,7 @@ const TextInputOutlined = ({
   const adornmentConfig = getAdornmentConfig({ left, right });
 
   const { colors, isV3, roundness } = theme;
-  const font = isV3 ? theme.fonts.bodyLarge : theme.fonts.regular;
+  const font = rest.customLabelFont || (isV3 ? theme.fonts.bodyLarge : theme.fonts.regular);
   const hasActiveOutline = parentState.focused || error;
 
   const { INPUT_PADDING_HORIZONTAL, MIN_HEIGHT, ADORNMENT_OFFSET, MIN_WIDTH } =
@@ -219,7 +219,7 @@ const TextInputOutlined = ({
     labelError: error,
     placeholderStyle,
     baseLabelTranslateY,
-    baseLabelTranslateX,
+    baseLabelTranslateX: rest.baseLabelTranslateX || baseLabelTranslateX,
     font,
     fontSize,
     lineHeight,

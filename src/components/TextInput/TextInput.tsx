@@ -172,6 +172,8 @@ export type Props = React.ComponentPropsWithRef<typeof NativeTextInput> & {
    * Example: `borderRadius`, `borderColor`
    */
   underlineStyle?: StyleProp<ViewStyle>;
+  baseLabelTranslateX?: number;
+  customLabelFont?: any;
 };
 
 interface CompoundedComponent
